@@ -1,0 +1,58 @@
+@use '../variables';
+
+.infos-bar {
+    padding: 20px 28px;
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    &__infos {
+        display: flex;
+        gap: 36px;
+        list-style: none;
+
+        &__item {
+            font-size: 14px;
+            color: #4a4a68;
+
+            b {
+                color: variables.$secondaryTextColor;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                margin-bottom: 4px;
+
+                i {
+                    color: variables.$pinkAccent;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+
+        &__infos {
+            justify-content: space-between;
+            gap: 16px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        padding: 20px;
+
+        &__infos {
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+}

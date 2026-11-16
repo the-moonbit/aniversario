@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Aniversário! - Vamos Celebrar Juntos!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="styles/main.scss">
+</head>
+<body>
+    <canvas id="confetti-canvas"></canvas>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero__logo" data-aos="zoom-in">
+                <span class="hero__logo__icon"><i class="bi bi-stars"></i></span>
+                <span class="hero__logo__text">PARTY NIGHT • 2026</span>
+            </div>
+
+            <h1 class="hero__title" data-aos="fade-up">
+                Vamos celebrar juntos!
+            </h1>
+
+            <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="100">
+                Prepare o seu melhor sorriso porque a contagem regressiva para a minha festa de aniversário já começou:
+            </p>
+
+            <div class="countdown" id="contador" data-aos="fade-up" data-aos-delay="200">
+                <div class="countdown__item">
+                    <span class="countdown__number" id="dias">00</span>
+                    <span class="countdown__label">Dias</span>
+                </div>
+                <div class="countdown__item">
+                    <span class="countdown__number" id="horas">00</span>
+                    <span class="countdown__label">Horas</span>
+                </div>
+                <div class="countdown__item">
+                    <span class="countdown__number" id="minutos">00</span>
+                    <span class="countdown__label">Minutos</span>
+                </div>
+                <div class="countdown__item">
+                    <span class="countdown__number" id="segundos">00</span>
+                    <span class="countdown__label">Segundos</span>
+                </div>
+            </div>
+
+            <div class="infos-bar" data-aos="fade-up" data-aos-delay="300">
+                <ul class="infos-bar__infos">
+                    <li class="infos-bar__infos__item">
+                        <b><i class="bi bi-calendar-heart-fill"></i> Data do Aniversário</b>
+                        13 de Julho de 2027 às 20h00
+                    </li>
+                    <li class="infos-bar__infos__item">
+                        <b><i class="bi bi-geo-alt-fill"></i> Local da Festa</b>
+                        Salão Saqua Lounge • Saquarema, RJ
+                    </li>
+                    <li class="infos-bar__infos__item">
+                        <b><i class="bi bi-gem"></i> Dress Code</b>
+                        Esporte Fino / Traje Festivo
+                    </li>
+                </ul>
+                <a href="#confirmar" class="button button--primary">
+                    <i class="bi bi-check2-circle"></i> Confirme sua presença
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="event event--data">
+        <div class="container" data-aos="fade-right">
+            <div class="event__details">
+                <span class="event__tag"><i class="bi bi-clock-history"></i> PROGRAMAÇÃO ESPECIAL</span>
+                <h2 class="event__details__title">Data do Aniversário</h2>
+                <p class="event__details__description">
+                    Marque no calendário: dia <strong>13 de Julho de 2027</strong>, a partir das <strong>20h00</strong>! Teremos recepção com welcome drinks, jantar especial, abertura da pista de dança às 22h e o tradicional parabéns à meia-noite com muita música e animação.
+                </p>
+                <ul class="event__highlights">
+                    <li><i class="bi bi-music-note-beamed"></i> DJ Juninho e setlist com os maiores hits</li>
+                    <li><i class="bi bi-cup-straw"></i> Open bar de drinks autorais e bebidas sem ácool</li>
+                </ul>
+            </div>
+            <div class="event__image-wrapper">
+                <img class="event__image" src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Balões e decoração de festa de aniversário">
+            </div>
+        </div>
+    </section>
+
+    <section class="event event--local event--image-left">
+        <div class="container" data-aos="fade-left">
+            <div class="event__details">
+                <span class="event__tag"><i class="bi bi-pin-map-fill"></i> COMO CHEGAR</span>
+                <h2 class="event__details__title">Local &amp; Ambiente</h2>
+                <p class="event__details__description">
+                    A comemoração será no <strong>Salão Saqua Lounge</strong>, um espaço amplo, climatizado e com área externa iluminada para aproveitarmos a noite com total conforto. O local conta com estacionamento privativo gratuito para todos os convidados.
+                </p>
+                <ul class="event__highlights">
+                    <li><i class="bi bi-car-front-fill"></i> Estacionamento exclusivo no local</li>
+                    <li><i class="bi bi-camera-fill"></i> Cabine de fotos e espaço instagramável</li>
+                </ul>
+            </div>
+            <div class="event__image-wrapper">
+                <img class="event__image" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="Salão de festas decorado e iluminado">
+            </div>
+        </div>
+    </section>
+
+    <section class="event event--gastronomia">
+        <div class="container" data-aos="fade-right">
+            <div class="event__details">
+                <span class="event__tag"><i class="bi bi-cake2-fill"></i> SABORES DA NOITE</span>
+                <h2 class="event__details__title">Buffet Gourmet &amp; Mesa de Doces</h2>
+                <p class="event__details__description">
+                    Preparamos um buffet completo com entradas finas, ilhas gastronômicas, sobremesas artesanais e um bolo especial de aniversário para tornar a experiência ainda mais deliciosa do início ao fim.
+                </p>
+            </div>
+            <div class="event__image-wrapper">
+                <img class="event__image" src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=800&q=80" alt="Bolo de aniversário com velas festivas">
+            </div>
+        </div>
+    </section>
+
+    <section class="event event--rsvp event--image-left" id="confirmar">
+        <div class="container" data-aos="fade-left">
+            <div class="event__details">
+                <span class="event__tag"><i class="bi bi-envelope-paper-heart-fill"></i> LISTA VIP</span>
+                <h2 class="event__details__title">Confirme sua Presença</h2>
+                <p class="event__details__description">
+                    Sua presença é indispensável para tornar essa noite inesquecível! Preencha os dados abaixo para colocar seu nome na lista da portaria:
+                </p>
+                <form class="rsvp-form" id="form-rsvp">
+                    <div class="rsvp-form__group">
+                        <input type="text" id="nome-convidado" placeholder="Seu nome completo" required>
+                        <select id="acompanhantes">
+                            <option value="0">Vou sozinho(a)</option>
+                            <option value="1">+ 1 acompanhante</option>
+                            <option value="2">+ 2 acompanhantes</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="button button--primary button--full">
+                        <i class="bi bi-send-fill"></i> Garantir meu lugar na festa
+                    </button>
+                </form>
+                <div class="rsvp-feedback" id="rsvp-mensagem"></div>
+            </div>
+            <div class="event__image-wrapper">
+                <img class="event__image" src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Amigos celebrando na festa">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__title"><i class="bi bi-balloon-heart-fill"></i> Espero você lá para comemorarmos juntos!</p>
+            <p class="footer__copy">Desenvolvido por Ryan Bruno para o projeto Front-End EBAC • 2026</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
